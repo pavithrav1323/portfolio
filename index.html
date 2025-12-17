@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pavithra | Portfolio</title>
+  <meta name="description" content="Pavithra - MSc AI & DS student | Python | Node.js | Firebase | ML fundamentals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="grid"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark"></span>
+        <span class="brand__text">Pavithra</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#education">Education</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          <span class="btn__icon" aria-hidden="true">◐</span>
+          <span class="btn__text">Theme</span>
+        </button>
+        <button class="btn btn--ghost header__menu" id="menuBtn" type="button" aria-label="Open menu">
+          <span class="btn__icon" aria-hidden="true">≡</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <span class="drawer__title">Menu</span>
+          <button class="btn btn--ghost" id="closeDrawerBtn" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <div class="drawer__links">
+          <a class="drawer__link" href="#about">About</a>
+          <a class="drawer__link" href="#skills">Skills</a>
+          <a class="drawer__link" href="#projects">Projects</a>
+          <a class="drawer__link" href="#education">Education</a>
+          <a class="drawer__link" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <div class="badge">MSc AI & Data Science (Pursuing) • Alagappa University</div>
+          <h1 class="hero__title">
+            Building practical projects in
+            <span class="grad">Python</span>, <span class="grad">Node.js</span>, and <span class="grad">Firebase</span>.
+          </h1>
+          <p class="hero__desc">
+            I am a BCA graduate and an AI & DS student focused on project-based learning.
+            I work on backend APIs, Firebase integration, and ML fundamentals, and I validate APIs using Postman.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="stat">
+              <div class="stat__num" data-counter="3">0</div>
+              <div class="stat__label">Core Tech Areas</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-counter="10">0</div>
+              <div class="stat__label">Key Skills</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-counter="1">0</div>
+              <div class="stat__label">Major Project</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card reveal">
+          <div class="card card--glass">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true">
+                <span>P</span>
+              </div>
+              <div>
+                <div class="card__name">Pavithra</div>
+                <div class="card__role">Student • Project-Based Learner</div>
+              </div>
+            </div>
+
+            <div class="pillrow">
+              <span class="pill">Python</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">Postman</span>
+              <span class="pill">EDA</span>
+            </div>
+
+            <div class="card__body">
+              <div class="timeline">
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline__content">
+                    <div class="timeline__title">Backend APIs</div>
+                    <div class="timeline__desc">REST endpoints, validation, testing with Postman.</div>
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline__content">
+                    <div class="timeline__title">Firebase Integration</div>
+                    <div class="timeline__desc">Firestore setup, service account configuration, connection.</div>
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline__content">
+                    <div class="timeline__title">ML Fundamentals</div>
+                    <div class="timeline__desc">Linear, Logistic Regression and XGBoost basics.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__footer">
+              <a class="link" href="#contact">Get in touch →</a>
+              <button class="btn btn--ghost btn--sm" id="copyEmailBtn" type="button">Copy Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">About</h2>
+          <p class="section__subtitle">
+            Honest, project-based progress. I focus on building and learning through real integrations.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="panel reveal">
+            <h3 class="panel__title">What I am focused on</h3>
+            <ul class="list">
+              <li>Backend API development using Node.js and TypeScript</li>
+              <li>Firebase Firestore setup and integration</li>
+              <li>API testing and debugging using Postman</li>
+              <li>Data analysis and ML fundamentals using Python</li>
+              <li>Basic frontend integration exposure (Flutter)</li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="panel__title">What I bring</h3>
+            <div class="chips">
+              <span class="chip">Consistent learning</span>
+              <span class="chip">Practical delivery</span>
+              <span class="chip">Debug mindset</span>
+              <span class="chip">Documentation-friendly</span>
+              <span class="chip">Clean communication</span>
+              <span class="chip">Design basics</span>
+            </div>
+            <div class="note">
+              Tip: Keep your portfolio honest. Add only what you can explain.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">Filter by category to quickly highlight your strengths.</p>
+        </div>
+
+        <div class="skillbar reveal">
+          <button class="tab is-active" data-skill-filter="all" type="button">All</button>
+          <button class="tab" data-skill-filter="backend" type="button">Backend</button>
+          <button class="tab" data-skill-filter="data" type="button">Data</button>
+          <button class="tab" data-skill-filter="cloud" type="button">Cloud</button>
+          <button class="tab" data-skill-filter="other" type="button">Other</button>
+        </div>
+
+        <div class="cards skills__grid reveal" id="skillsGrid">
+          <div class="card skill" data-skill="backend"><div class="skill__name">Node.js</div><div class="skill__meta">APIs • routing • logic</div></div>
+          <div class="card skill" data-skill="backend"><div class="skill__name">TypeScript</div><div class="skill__meta">types • clean code</div></div>
+          <div class="card skill" data-skill="backend"><div class="skill__name">REST API Development</div><div class="skill__meta">GET/POST/PUT/DELETE</div></div>
+          <div class="card skill" data-skill="backend"><div class="skill__name">Postman</div><div class="skill__meta">testing • debugging</div></div>
+
+          <div class="card skill" data-skill="cloud"><div class="skill__name">Firebase</div><div class="skill__meta">setup • integration</div></div>
+          <div class="card skill" data-skill="cloud"><div class="skill__name">Firestore</div><div class="skill__meta">collections • queries</div></div>
+          <div class="card skill" data-skill="cloud"><div class="skill__name">Service Account</div><div class="skill__meta">secure connection</div></div>
+
+          <div class="card skill" data-skill="data"><div class="skill__name">Python</div><div class="skill__meta">intermediate</div></div>
+          <div class="card skill" data-skill="data"><div class="skill__name">Pandas</div><div class="skill__meta">EDA • cleaning</div></div>
+          <div class="card skill" data-skill="data"><div class="skill__name">NumPy</div><div class="skill__meta">arrays • compute</div></div>
+          <div class="card skill" data-skill="data"><div class="skill__name">Matplotlib</div><div class="skill__meta">plots • visuals</div></div>
+          <div class="card skill" data-skill="data"><div class="skill__name">ML Fundamentals</div><div class="skill__meta">Linear • Logistic • XGBoost</div></div>
+
+          <div class="card skill" data-skill="other"><div class="skill__name">Flutter (Basic)</div><div class="skill__meta">integration exposure</div></div>
+          <div class="card skill" data-skill="other"><div class="skill__name">Poster Design</div><div class="skill__meta">digital marketing</div></div>
+          <div class="card skill" data-skill="other"><div class="skill__name">Problem Solving</div><div class="skill__meta">debug-first approach</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">Click “Details” to open a dynamic project modal.</p>
+        </div>
+
+        <div class="cards projects__grid reveal">
+          <article class="card project">
+            <div class="project__top">
+              <div class="project__badge">Major</div>
+              <h3 class="project__title">SERV Attendance App</h3>
+              <p class="project__desc">
+                Attendance management application built as a practical learning project with backend APIs and Firebase integration.
+              </p>
+            </div>
+            <div class="project__tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Flutter (Basic)</span>
+            </div>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm"
+                data-open-modal="serv"
+                type="button">Details</button>
+              <a class="btn btn--ghost btn--sm" href="#contact">Request Demo</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <div class="project__badge project__badge--alt">Mini</div>
+              <h3 class="project__title">EDA Practice Notebook</h3>
+              <p class="project__desc">
+                Exploratory data analysis using Pandas and Matplotlib with clean steps and readable insights.
+              </p>
+            </div>
+            <div class="project__tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">EDA</span>
+            </div>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm" data-open-modal="eda" type="button">Details</button>
+              <a class="btn btn--ghost btn--sm" href="#contact">Ask for Files</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <div class="project__badge project__badge--alt2">Mini</div>
+              <h3 class="project__title">API Testing Templates</h3>
+              <p class="project__desc">
+                A reusable Postman collection pattern: auth, CRUD, validations, and error testing.
+              </p>
+            </div>
+            <div class="project__tags">
+              <span class="tag">Postman</span>
+              <span class="tag">REST</span>
+              <span class="tag">Testing</span>
+            </div>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm" data-open-modal="postman" type="button">Details</button>
+              <a class="btn btn--ghost btn--sm" href="#contact">Get Template</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Education</h2>
+          <p class="section__subtitle">Your academic path is a strength. Keep it visible.</p>
+        </div>
+
+        <div class="cards reveal">
+          <div class="card edu">
+            <div class="edu__title">MSc Artificial Intelligence & Data Science (Pursuing)</div>
+            <div class="edu__meta">Alagappa University</div>
+            <div class="edu__meta2">Focus: Python, EDA, ML fundamentals</div>
+          </div>
+
+          <div class="card edu">
+            <div class="edu__title">BCA (Bachelor of Computer Applications)</div>
+            <div class="edu__meta">Undergraduate Degree</div>
+            <div class="edu__meta2">Foundation: programming, databases, basics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Send a message, or copy the email quickly.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="panel reveal">
+            <h3 class="panel__title">Quick Links</h3>
+            <div class="contact__links">
+              <a class="contact__link" href="#" id="linkedinLink" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="contact__link" href="#" id="githubLink" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="contact__link" href="#top">Back to Top</a>
+            </div>
+            <div class="note">
+              Update your LinkedIn/GitHub URLs inside <span class="mono">script.js</span>.
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="panel__title">Message</h3>
+            <form class="form" id="contactForm">
+              <label class="field">
+                <span class="field__label">Your name</span>
+                <input class="field__input" name="name" placeholder="Enter your name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="Enter your email" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Message</span>
+                <textarea class="field__input field__textarea" name="message" placeholder="Write your message" required></textarea>
+              </label>
+              <button class="btn btn--primary" type="submit">Send</button>
+              <div class="form__hint" id="formHint" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Pavithra. Built with HTML, CSS, and JavaScript.</div>
+      <div class="footer__right">
+        <span class="dot"></span>
+        <span class="muted">Dynamic UI • Smooth UX</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__panel" role="document" aria-label="Project details">
+      <div class="modal__top">
+        <div>
+          <div class="modal__kicker" id="modalKicker">Project</div>
+          <div class="modal__title" id="modalTitle">Title</div>
+        </div>
+        <button class="btn btn--ghost" id="modalCloseBtn" type="button" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal__body">
+        <p class="modal__desc" id="modalDesc"></p>
+
+        <div class="modal__grid">
+          <div class="mini">
+            <div class="mini__title">Highlights</div>
+            <ul class="mini__list" id="modalHighlights"></ul>
+          </div>
+          <div class="mini">
+            <div class="mini__title">Tech Stack</div>
+            <div class="mini__tags" id="modalTech"></div>
+          </div>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--primary btn--sm" id="modalCopyBtn" type="button">Copy Summary</button>
+          <a class="btn btn--ghost btn--sm" href="#contact" id="modalCtaLink">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
