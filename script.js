@@ -2,9 +2,9 @@
 // Config: update your links
 // ---------------------------
 const CONFIG = {
-  email: "pavithra@example.com", // change to your email
-  linkedin: "https://www.linkedin.com/in/your-linkedin-id", // change
-  github: "https://github.com/your-github-id" // change
+  email: "pavithraannu2003@gmail..com", // change to your email
+  linkedin: "https://www.linkedin.com/in/pavithravenkatesan2003/", // change
+  github: "https://github.com/pavithrav1323" // change
 };
 
 // ---------------------------
@@ -266,39 +266,50 @@ copyEmailBtn?.addEventListener("click", async () => {
 });
 
 // ---------------------------
-// Contact form: opens mail client (mailto)
 // ---------------------------
+// Contact form: EmailJS (sends email automatically)
+// ---------------------------
+
+// 1) EmailJS config (update public key)
+const EMAILJS_PUBLIC_KEY = "eQxJVWKsAWS_bxNu9";
+const EMAILJS_SERVICE_ID = "service_hnk8ipq";
+const EMAILJS_TEMPLATE_ID = "template_1wtwhh9";
+
+// 2) Load + init EmailJS (safe)
+if (window.emailjs) {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 const contactForm = $("#contactForm");
 const formHint = $("#formHint");
 
-contactForm?.addEventListener("submit", (e) => {
+contactForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = new FormData(contactForm);
-  const name = String(data.get("name") || "").trim();
-  const email = String(data.get("email") || "").trim();
+  const from_name = String(data.get("name") || "").trim();
+  const from_email = String(data.get("email") || "").trim();
   const message = String(data.get("message") || "").trim();
 
-  if (!name || !email || !message) {
+  if (!from_name || !from_email || !message) {
     formHint.textContent = "Please fill all fields.";
     return;
   }
 
-  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+  formHint.textContent = "Sending...";
 
-  formHint.textContent = "Opening your email app...";
-  contactForm.reset();
-  setTimeout(() => (formHint.textContent = ""), 1500);
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_name,
+      from_email,
+      message
+    });
+
+    formHint.textContent = "Message sent successfully.";
+    contactForm.reset();
+    setTimeout(() => (formHint.textContent = ""), 2000);
+  } catch (err) {
+    formHint.textContent = "Failed to send. Please try again.";
+    setTimeout(() => (formHint.textContent = ""), 2500);
+  }
 });
-
-// ---------------------------
-// Footer year + link setup
-// ---------------------------
-$("#year").textContent = new Date().getFullYear().toString();
-
-const linkedinLink = $("#linkedinLink");
-const githubLink = $("#githubLink");
-if (linkedinLink) linkedinLink.href = CONFIG.linkedin;
-if (githubLink) githubLink.href = CONFIG.github;
