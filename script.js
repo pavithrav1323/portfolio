@@ -2,7 +2,7 @@
 // Config: update your links
 // ---------------------------
 const CONFIG = {
-  email: "pavithraannu2003@gmail..com", // change to your email
+  email: "pavithraannu2003@gmail.com", // change to your email
   linkedin: "https://www.linkedin.com/in/pavithravenkatesan2003/", // change
   github: "https://github.com/pavithrav1323" // change
 };
